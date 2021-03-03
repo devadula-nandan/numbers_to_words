@@ -15,13 +15,8 @@ const numbersToText = {
     7: "seven",
     8: "eight",
     9: "nine",
-    0: "zero",
-
+    0: "zero"
 }
-
-
-
-
 function compareNumberAndGetText(ip) {
     Object.keys(numbersToText).forEach(function (item) {
         if (ip == item) {
@@ -29,25 +24,18 @@ function compareNumberAndGetText(ip) {
         }
     });
 }
-
 function fnSubm(event) {
     event.preventDefault();
     const givenInput = ipt.intex.value.split(/\r?\n/);
     console.log(givenInput);
     givenInput.forEach(value => {
-
         const op = document.createElement("pre");
-
-
-
         value.split('').forEach(function (c) {
             compareNumberAndGetText(c);
             console.log(text);
             let texT = document.createTextNode(text + " ");
             op.appendChild(texT);
-
         });
-
         body.appendChild(op);
     });
 }
